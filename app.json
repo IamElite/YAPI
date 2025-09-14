@@ -1,0 +1,36 @@
+{
+  "name": "YT Audio API",
+  "description": "A FastAPI-based API for YouTube audio and video streaming and downloading",
+  "keywords": [
+    "python",
+    "fastapi",
+    "youtube",
+    "audio",
+    "video",
+    "streaming",
+    "download"
+  ],
+  "env": {
+    "API_KEY": {
+      "description": "The API key for securing endpoints (default: BadApiYt)",
+      "value": "BadApiYt",
+      "required": false
+    },
+    "MONGO_URI": {
+      "description": "MongoDB connection string for storing audio IDs and statistics",
+      "value": "mongodb+srv://BADMUNDA:BADMYDAD@badhacker.i5nw9na.mongodb.net/",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
