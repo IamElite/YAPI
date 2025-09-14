@@ -44,10 +44,5 @@
     }
   ],
   "stack": "container",
-  "formation": {
-    "worker": {
-      "quantity": "1",
-      "size": "Standard-2X"
-    }
-  }
 }
+
