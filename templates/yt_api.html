@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT API Player</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>YT API Player</h1>
+    <div class="player">
+        <input type="text" id="urlInput" placeholder="Enter YouTube URL">
+        <button onclick="playMedia('audio')">Play Audio</button>
+        <button onclick="playMedia('video')">Play Video</button>
+        <button onclick="downloadMedia('mp3')">Download MP3</button>
+        <button onclick="downloadMedia('mp4')">Download MP4</button>
+        <div id="mediaPlayer"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

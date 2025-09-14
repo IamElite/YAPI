@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad YT API Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Bad YT API</h1>
+    <div class="stats-box">
+        <p>Cached Songs: 0</p>
+        <p>Total Plays/Requests: {{ stats.total_plays_requests }}</p>
+        <p>Today's Plays: {{ stats.today_plays }}</p>
+        <p>Active Keys: {{ stats.active_keys }}</p>
+    </div>
+    <div class="api-details">
+        <h2>API Details</h2>
+        <p>API URL: /api/yt-audio-video (GET)</p>
+        <p>Query: url={youtube_url}&quality={audiobest|best}</p>
+        <p>Header: X-API-Key: BadApiYt</p>
+        <p>Download: /api/yt-download?url={youtube_url}&format={mp3|mp4}</p>
+        <p>Check key validity via /api/ping or use User Panel to get your key.</p>
+    </div>
+    <div class="test-buttons">
+        <button onclick="testAudio()">Test Audio</button>
+        <button onclick="testVideo()">Test Video</button>
+    </div>
+    <div id="mediaPlayer"></div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
