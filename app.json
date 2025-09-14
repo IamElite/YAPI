@@ -20,17 +20,34 @@
       "description": "MongoDB connection string for storing audio IDs and statistics",
       "value": "mongodb+srv://BADMUNDA:BADMYDAD@badhacker.i5nw9na.mongodb.net/",
       "required": false
-    }
-  },
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "free"
+    },
+    "UPSTREAM_REPO": {
+      "description": "If you dont know this, Leave as it is",
+      "value": "https://github.com/IamElite/YAPI",
+      "required": true
+    },
+    "UPSTREAM_BRANCH": {
+      "description": "Upstream Repo's Branch Name",
+      "value": "main",
+      "required": true
     }
   },
   "buildpacks": [
     {
       "url": "heroku/python"
+    },
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
     }
-  ]
+  ],
+  "stack": "container",
+  "formation": {
+    "worker": {
+      "quantity": "1",
+      "size": "Standard-2X"
+    }
+  }
 }
