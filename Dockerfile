@@ -27,4 +27,4 @@ COPY --from=builder /app /app
 EXPOSE 5050
 
 # Command to run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5050"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "${PORT:-5050}"]
