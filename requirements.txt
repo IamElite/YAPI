@@ -5,6 +5,7 @@ yt-dlp==2023.11.16
 requests==2.31.0
 
 fastapi
-uvicorn[standard]
+uvicorn
 jinja2
+
 
